@@ -74,7 +74,9 @@ if st.sidebar.button("로그아웃"):
     st.session_state.logged_in = False
     st.rerun()
 
-tab0, tab1, tab2, tab3 = st.tabs(["📊 대시보드", "🛒 주문 및 출고", "📄 PDF 전표 발행", "⚙️ 시스템 설정"])
+tab0, tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    "📊 대시보드", "📦 재고/입고", "👥 고객관리", "🛒 주문/출고", "📄 전표출력", "📥 내보내기"
+])
 
 # --- 탭 1: 주문 및 출고 ---
 with tab1:
@@ -108,4 +110,5 @@ with tab3:
             st.warning("데이터를 삭제하시겠습니까?")
             # 초기화 로직...
     else:
+
         st.error("⛔ 스태프 계정은 시스템 설정에 접근할 수 없습니다.")
